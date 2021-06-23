@@ -1,0 +1,145 @@
+# Sources mention which Files/Dirs to be taken for Analysis
+sources:
+  # Default Directory will be Current Directory for the yaml file. Once can specify the absolute path 
+  basedir: '.'
+  files:
+    # Default will be all Files in the base Dir 
+    - path: '/*'
+    # One can specify the relative path with respect to the Base Dir
+    #- path: 'org/jedit/core/JavaFileFromOtherPath.java'
+  #Files to be Excluded are mentioned in exclusions as per language
+  exclusions:
+    - pattern
+       - "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external)"
+      language: 'java'
+    - pattern: 
+       - 'thirdparty'
+       - 'third-party'
+       - '3rd-party'
+       - 'external'
+       - 'generated'
+       - 'mock'
+       - 'test'
+       - 'build'
+      language: 'cpp'
+    - pattern
+       - "(?i)(.g.cs|example|mock|assemblyinfo.cs|.AssemblyAttributes.cs|.AnyCPU.Debug|.AnyCPU.Release)"
+      language: 'c_sharp'
+    - pattern: 
+       - 'thirdparty'
+       - 'third-party'
+       - '3rd-party'
+       - 'external'
+       - 'generated'
+       - 'mock'
+       - 'test'
+       - 'build'
+      language: 'objective_c'
+    - pattern: 
+       - '_init_.py'
+       - 'test'
+      language: 'python'
+    - pattern: 
+       - 'node_modules'
+       - '.min.js'
+       - 'dist'
+       - 'external'
+       - 'assets'
+       - 'gulp'
+       - 'grunt'
+       - 'libs'
+       - '-bundle.js'
+       - '.bundle.js'
+       - 'swagger-ui'
+       - '.config.js'
+       - '-config.js'
+       - 'UNKNOWN_FILE'
+       - '.git'
+       - '.ebextensions'
+       - 'test'
+       - '.lib'
+       - '.library'
+       - '.zip'
+      language: 'javascript'
+    - pattern: 
+       - 'node_modules'
+       - '.min.js'
+       - 'dist'
+       - 'external'
+       - 'assets'
+       - 'gulp'
+       - 'grunt'
+       - 'libs'
+       - '-bundle.js'
+       - '.bundle.js'
+       - 'swagger-ui'
+       - '.config.js'
+       - '-config.js'
+       - 'UNKNOWN_FILE'
+       - '.git'
+       - '.ebextensions'
+       - 'test'
+       - '.lib'
+       - '.library'
+       - '.zip'
+       - '.d.ts'
+      language: 'typescript'
+    - pattern: 
+       - 'vendor'
+       - 'wp-content/plugins'
+       - 'protected/extensions'
+       - 'test'
+      language: 'php'
+    - pattern: 
+       - 'test'
+      language: 'go'
+    - pattern: 
+       - 'test'
+      language: 'kotlin'
+    - pattern: 
+       - 'test'
+      language: 'solidity'
+    - pattern: 
+       - 'test'
+      language: 'sql'
+    - pattern: 
+       - 'test'
+      language: 'swift'
+
+# Specify the languages you wuould like to Scan. Default is all Detected
+#languages: 'JAVA,CPP'
+#Specify CPP Specific Parser Settings
+#parserSettings:
+#  additionalOptions:
+#    - opt: '--cdb=<>'
+#    - opt: '--jobs=2'
+#  includePaths:
+#    - path: '/some/path1'
+#    - path: '/some/path2'
+
+#Enable/Disable specific running of Analysis Steps. Default is all true
+#analysers:
+#  codeChecks: true
+#  antiPatterns: true
+#  duplication: true
+
+#Define modules one would like to run or disable.
+#If you would like to disable specific checks, one can do so   
+# To get more idea about rules & modules visit http://rules.embold.io
+#modules:
+#  - name: pmd
+#    enabled: true
+#    config:
+#      - name: ruleSets
+#        value: 'rulesets/java/strictexception.xml,rulesets/java/basic.xml,rulesets/java/design.xml,category/java/security.xml'
+#      - name: javaVersion
+#        value: '1.8'
+#  - name: gamma_cxx
+#    enabled: true
+#    rules:
+#      - name: accessForwarded
+#        enabled: true
+#      - name: accessMoved
+#        enabled: true
+#      - name: arithOperationsOnVoidPointer
+#        enabled: false
