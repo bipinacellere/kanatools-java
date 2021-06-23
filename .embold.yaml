@@ -9,7 +9,7 @@ sources:
     #- path: 'org/jedit/core/JavaFileFromOtherPath.java'
   #Files to be Excluded are mentioned in exclusions as per language
   exclusions:
-    - pattern
+    - pattern:
        - "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external)"
       language: 'java'
     - pattern: 
