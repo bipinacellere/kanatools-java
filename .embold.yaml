@@ -23,7 +23,7 @@ sources:
        - 'build'
        - 'KanaAppraiser'
       language: 'cpp'
-    - pattern
+    - pattern :
        - "(?i)(.g.cs|example|mock|assemblyinfo.cs|.AssemblyAttributes.cs|.AnyCPU.Debug|.AnyCPU.Release)"
       language: 'c_sharp'
     - pattern: 
