@@ -10,7 +10,7 @@ sources:
   #Files to be Excluded are mentioned in exclusions as per language
   exclusions:
     - pattern:
-       - "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external)"
+       - "(?i)(test|generated|mock|thirdparty|third-party|3rd-party|3rdparty|external|KanaAppraiser)"
       language: 'java'
     - pattern: 
        - 'thirdparty'
